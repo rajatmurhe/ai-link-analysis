@@ -11,7 +11,7 @@ A FastAPI service that reads a company's website and uses an LLM (free OpenRoute
 
 | | |
 |---|---|
-| **Live demo** | `https://<your-deployment>/docs` *(see [Deployment](#9-deployment))* |
+| **Live demo** | https://ai-link-analysis-ie90.onrender.com/docs *(free instance, the first request after idle takes ~50 s to wake up)* |
 | **Endpoint** | `POST /link-analysis` on port `4000` |
 | **Stack** | Python 3.10+, FastAPI, Uvicorn, Pydantic v2, HTTPX, BeautifulSoup + lxml, Anthropic SDK |
 | **LLM providers** | **OpenRouter (default, free models)**, any OpenAI-compatible API (Gemini free tier, Groq, OpenAI...), or Anthropic Claude. Switch with one env var. |

@@ -1,4 +1,4 @@
-# One-click deploy on Render: New → Blueprint → select this repo, then set LLM_API_KEY.
+# render: New > Blueprint > pick this repo, then add LLM_API_KEY
 services:
   - type: web
     name: ai-link-analysis
@@ -7,8 +7,8 @@ services:
     healthCheckPath: /health
     envVars:
       - key: LLM_PROVIDER
-        value: openrouter          # free models; switch to "anthropic" + ANTHROPIC_API_KEY for production
+        value: openrouter          # or anthropic + ANTHROPIC_API_KEY
       - key: LLM_API_KEY
-        sync: false                # your OpenRouter key (https://openrouter.ai/keys)
+        sync: false                # set in the dashboard, not here
       - key: RATE_LIMIT_PER_MINUTE
         value: "5"

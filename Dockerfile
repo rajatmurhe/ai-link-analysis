@@ -17,5 +17,5 @@ USER appuser
 EXPOSE 4000
 HEALTHCHECK --interval=30s --timeout=5s CMD python -c "import urllib.request,os; urllib.request.urlopen(f'http://127.0.0.1:{os.environ.get(\"PORT\",\"4000\")}/health')"
 
-# --proxy-headers so rate limiting sees the real client IP behind the platform's load balancer.
+# proxy headers so the rate limiter gets the real client ip
 CMD ["sh", "-c", "uvicorn app.main:app --host 0.0.0.0 --port ${PORT} --proxy-headers --forwarded-allow-ips='*'"]
