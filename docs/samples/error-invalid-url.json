@@ -1,0 +1,1 @@
+{"success":false,"error":{"code":"INVALID_URL","message":"Unsupported URL scheme 'ftp'. Only http and https are allowed.","details":{}},"request_id":"7a12a5c636d64386"}

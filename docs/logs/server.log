@@ -1,0 +1,59 @@
+INFO:     Started server process [30575]
+INFO:     Waiting for application startup.
+2026-11-18T17:23:22 INFO    app | Started AI Link Analysis API v1.0.0 (provider=openrouter, model=baidu/ernie-5.5-flash-preview:free, fallback=nvidia/nemotron-3.5-super-vl:free,openrouter/free)
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:4000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:65442 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65444 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65448 - "GET /health HTTP/1.1" 200 OK
+2026-11-18T17:25:18 INFO    app.services.llm_service | LLM openrouter/baidu/ernie-5.5-flash-preview:free ok in 99120ms: in=8587 out=22521
+2026-11-18T17:25:21 INFO    app.services.analysis_service | Analysed https://basecamp.com/: pages=5 chars=29996 model=baidu/ernie-5.5-flash-preview:free cost=$0.00000 total=106445ms
+2026-11-18T17:25:21 INFO    app | POST /link-analysis -> 200 (108390ms) [7f2976c8b2a04a5c]
+INFO:     127.0.0.1:65451 - "POST /link-analysis HTTP/1.1" 200 OK
+2026-11-18T17:26:52 INFO    app.services.llm_service | LLM openrouter/baidu/ernie-5.5-flash-preview:free ok in 87400ms: in=2537 out=21605
+2026-11-18T17:26:53 INFO    app.services.analysis_service | Analysed https://www.python.org/: pages=2 chars=4404 model=baidu/ernie-5.5-flash-preview:free cost=$0.00000 total=89427ms
+2026-11-18T17:26:53 INFO    app | POST /link-analysis -> 200 (89773ms) [7ed3e359e275469a]
+INFO:     127.0.0.1:65476 - "POST /link-analysis HTTP/1.1" 200 OK
+2026-11-18T17:26:58 WARNING app.services.llm_service | LLM openrouter/baidu/ernie-5.5-flash-preview:free failed (Rate limited by the LLM provider (free-tier models have per-minute/day limits).); trying fallback
+2026-11-18T17:28:38 INFO    app.services.llm_service | LLM openrouter/nvidia/nemotron-3.5-super-vl:free ok in 100464ms: in=3840 out=15211
+2026-11-18T17:28:40 INFO    app.services.analysis_service | Analysed https://www.allbirds.com/: pages=3 chars=7155 model=nvidia/nemotron-3.5-super-vl:free cost=$0.00000 total=107142ms
+2026-11-18T17:28:40 INFO    app | POST /link-analysis -> 200 (107255ms) [055955a61a274d3e]
+INFO:     127.0.0.1:65512 - "POST /link-analysis HTTP/1.1" 200 OK
+2026-11-18T17:28:41 INFO    app | POST /link-analysis -> 200 (160ms) [7ac4ab3d8f81453d]
+INFO:     127.0.0.1:49155 - "POST /link-analysis HTTP/1.1" 200 OK
+2026-11-18T17:28:41 WARNING app | INVALID_URL: Unsupported URL scheme 'ftp'. Only http and https are allowed. {}
+2026-11-18T17:28:41 INFO    app | POST /link-analysis -> 422 (22ms) [7a12a5c636d64386]
+INFO:     127.0.0.1:49157 - "POST /link-analysis HTTP/1.1" 422 Unprocessable Entity
+2026-11-18T17:28:41 WARNING app | BLOCKED_URL: URL points to a private or reserved IP address. {}
+2026-11-18T17:28:41 INFO    app | POST /link-analysis -> 400 (2ms) [0edeef3a16ce46ad]
+INFO:     127.0.0.1:49159 - "POST /link-analysis HTTP/1.1" 400 Bad Request
+2026-11-18T17:28:41 WARNING app | BLOCKED_URL: Host 'localhost' is an internal hostname and cannot be analysed. {}
+2026-11-18T17:28:41 INFO    app | POST /link-analysis -> 400 (1ms) [006d5a7a7fc6480e]
+INFO:     127.0.0.1:49161 - "POST /link-analysis HTTP/1.1" 400 Bad Request
+2026-11-18T17:28:41 ERROR   app | WEBSITE_UNREACHABLE: Could not resolve hostname 'this-domain-does-not-exist-12345.com'. Check the domain is correct and online. {}
+2026-11-18T17:28:41 INFO    app | POST /link-analysis -> 502 (359ms) [d8cd148ee7354506]
+INFO:     127.0.0.1:49163 - "POST /link-analysis HTTP/1.1" 502 Bad Gateway
+2026-11-18T17:28:43 WARNING app | UNSUPPORTED_CONTENT: URL returned 'image/png', not an HTML web page. {'url': 'https://httpbin.org/image/png', 'content_type': 'image/png'}
+2026-11-18T17:28:43 INFO    app | POST /link-analysis -> 422 (1582ms) [c68ea12c82af45e2]
+INFO:     127.0.0.1:49165 - "POST /link-analysis HTTP/1.1" 422 Unprocessable Entity
+2026-11-18T17:28:43 INFO    app | POST /link-analysis -> 422 (44ms) [c72772dccd2140a7]
+INFO:     127.0.0.1:49168 - "POST /link-analysis HTTP/1.1" 422 Unprocessable Entity
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [30575]
+INFO:     Started server process [33368]
+INFO:     Waiting for application startup.
+2026-11-18T17:30:08 INFO    app | Started AI Link Analysis API v1.0.0 (provider=openrouter, model=baidu/ernie-5.5-flash-preview:free, fallback=nvidia/nemotron-3.5-super-vl:free,openrouter/free)
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:4000 (Press CTRL+C to quit)
+2026-11-18T17:31:57 INFO    app.services.llm_service | LLM openrouter/baidu/ernie-5.5-flash-preview:free ok in 88069ms: in=8614 out=18462
+2026-11-18T17:31:57 INFO    app.services.analysis_service | Analysed https://basecamp.com/: pages=5 chars=29996 model=baidu/ernie-5.5-flash-preview:free cost=$0.00000 total=97705ms
+2026-11-18T17:31:57 INFO    app | POST /link-analysis -> 200 (98041ms) [1f288053a3bf4eed]
+INFO:     127.0.0.1:49237 - "POST /link-analysis HTTP/1.1" 200 OK
+2026-11-18T17:31:57 INFO    app | POST /link-analysis -> 200 (7ms) [0a0acb25397f45b3]
+INFO:     127.0.0.1:49283 - "POST /link-analysis HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [33368]

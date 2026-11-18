@@ -1,0 +1,25 @@
+GET /health -> HTTP 200
+POST /link-analysis {"url": "https://basecamp.com"}
+  -> HTTP 200 in 108.637160s
+POST /link-analysis {"url": "python.org"}
+  -> HTTP 200 in 90.022817s
+POST /link-analysis {"url": "https://www.allbirds.com"}
+  -> HTTP 200 in 107.313643s
+POST /link-analysis {"url": "https://basecamp.com/"}
+  -> HTTP 200 in 0.200766s
+POST /link-analysis {"url": "ftp://example.com"}
+  -> HTTP 422 in 0.025196s
+POST /link-analysis {"url": "http://169.254.169.254/latest/meta-data/"}
+  -> HTTP 400 in 0.003765s
+POST /link-analysis {"url": "http://localhost/admin"}
+  -> HTTP 400 in 0.003570s
+POST /link-analysis {"url": "https://this-domain-does-not-exist-12345.com"}
+  -> HTTP 502 in 0.361631s
+POST /link-analysis {"url": "https://httpbin.org/image/png"}
+  -> HTTP 422 in 1.584922s
+POST /link-analysis {}
+  -> HTTP 422 in 0.046946s
+POST /link-analysis {"url": "https://basecamp.com"}  (re-run after platform-order fix)
+  -> HTTP 200 in 98.902927s
+POST /link-analysis {"url": "https://basecamp.com/"}  (repeat → cache)
+  -> HTTP 200 in 0.023725s

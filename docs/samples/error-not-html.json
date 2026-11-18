@@ -1,0 +1,1 @@
+{"success":false,"error":{"code":"UNSUPPORTED_CONTENT","message":"URL returned 'image/png', not an HTML web page.","details":{"url":"https://httpbin.org/image/png","content_type":"image/png"}},"request_id":"c68ea12c82af45e2"}

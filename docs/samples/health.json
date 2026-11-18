@@ -1,0 +1,1 @@
+{"status":"ok","version":"1.0.0","llm_configured":true,"provider":"openrouter","model":"baidu/ernie-5.5-flash-preview:free","fallback_model":"nvidia/nemotron-3.5-super-vl:free,openrouter/free"}
