@@ -56,7 +56,7 @@ A FastAPI service that reads a company's website and uses an LLM (free OpenRoute
 ## 2. Quick start
 
 ```bash
-git clone https://github.com/<you>/ai-link-analysis.git
+git clone https://github.com/rajatmurhe/ai-link-analysis.git
 cd ai-link-analysis
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
